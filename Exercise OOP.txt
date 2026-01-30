@@ -1,0 +1,49 @@
+1. Identified Problem (OOD Candidate)
+
+Managing and analyzing different halophilic bacterial isolates collected from Chott El Hodna is complex because each isolate has shared biological characteristics but also distinct growth behaviors under varying salinity and environmental conditions.
+This makes it a good candidate for object-oriented design, where each bacterial isolate can be modeled as an object with common structure and specialized behavior.
+
+2. Object with Static and Dynamic Aspects
+
+Object: HalophilicBacterium
+
+Static properties (attributes):
+
+speciesName
+
+optimalSaltConcentration
+
+growthTemperature
+
+pHRange
+
+samplingLocation
+
+gramReaction
+
+Behavior (functions / methods):
+
+grow(saltConcentration)
+
+measureGrowthRate()
+
+tolerateSalinity(level)
+
+producePigment()
+
+isViable(environmentConditions)
+
+3. Inheritance and Polymorphism
+
+Inheritance example:
+A base class HalophilicBacterium can be extended into subclasses such as:
+
+ExtremeHalophile
+
+ModerateHalophile
+
+These subclasses inherit common attributes and behaviors but may redefine specific ones.
+
+Polymorphism example:
+The method grow() can behave differently depending on the bacterial type.
+For instance, ExtremeHalophile may grow optimally only at very high salt concentrations, while ModerateHalophile can grow over a wider salinity range. The same method call produces different outcomes depending on the object type.
